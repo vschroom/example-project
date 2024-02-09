@@ -1,7 +1,6 @@
 package com.chernov.exampleproject.service.impl;
 
 import com.chernov.exampleproject.model.entity.Account;
-import com.chernov.exampleproject.model.entity.User;
 import com.chernov.exampleproject.repositoy.AccountRepository;
 import com.chernov.exampleproject.service.AccountService;
 import lombok.RequiredArgsConstructor;
@@ -22,18 +21,6 @@ public class AccountServiceImpl implements AccountService {
     private BigDecimal stepPercentage;
 
     private final AccountRepository accountRepository;
-
-    @Override
-    @Transactional
-    public Account createAccount(User user) {
-        Account account = Account.builder()
-                .user(user)
-                .balance(BigDecimal.valueOf(100))
-                .initialBalance(BigDecimal.valueOf(100))
-                .build();
-
-        return accountRepository.save(account);
-    }
 
     @Transactional
     public void increaseEveryBalanceToFixedPercent() {
