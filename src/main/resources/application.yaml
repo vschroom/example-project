@@ -11,6 +11,7 @@ spring:
     open-in-view: false
 
 cache:
+  names: user_filter
   default:
     minutes:
       ttl: 120

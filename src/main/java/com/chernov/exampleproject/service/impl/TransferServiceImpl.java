@@ -26,6 +26,7 @@ public class TransferServiceImpl implements TransferService {
     @Override
     @Transactional(isolation = Isolation.REPEATABLE_READ)
     public void transferBalanceFromCurrentUserAccount(TransferRequest request) {
+
         Long userIdFrom = userService.getCurrentUser().getId();
         Account accountFrom = findByUser(userIdFrom);
         Account accountTo = findByUser(request.getUserIdTo());
