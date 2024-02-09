@@ -1,0 +1,99 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="08027d4c-945b-4893-afe0-dc58ca7cf99e" author="chernovvs">
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="name" value="Петр Петров"/>
+            <column name="date_of_birth" value="1995-03-08"/>
+            <column name="password" value="$2a$10$IP.Z6y7thhLJ1i1fuSiISOquSOF92dp6nxT4j3tR4hiIl6hiRsaV2"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="2"/>
+            <column name="name" value="Иван Иванов"/>
+            <column name="date_of_birth" value="1998-07-18"/>
+            <column name="password" value="$2a$10$hlR5tQxwNoN.b3fB/2Qw0OoDQd.y0sT28txjbh5AMXGm45ZQffdp6"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="3"/>
+            <column name="name" value="Олег Олегов"/>
+            <column name="date_of_birth" value="1993-01-10"/>
+            <column name="password" value="$2a$10$i1tPmDA4r3EDGI7tQaPFpuna959f0We2VlCABXR6L2ibbCMB92J1K"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="4"/>
+            <column name="name" value="Александр Александров"/>
+            <column name="date_of_birth" value="1989-04-10"/>
+            <column name="password" value="$2a$10$rZ6a0zDx1MvLC7uUB5UcAe8Lk6aW.144AiXjhmz9uTK9p.XKtBD96"/>
+        </insert>
+
+        <insert tableName="accounts">
+            <column name="id" value="1"/>
+            <column name="user_id" value="1"/>
+            <column name="balance" value="100"/>
+            <column name="initial_balance" value="100"/>
+        </insert>
+        <insert tableName="accounts">
+            <column name="id" value="2"/>
+            <column name="user_id" value="2"/>
+            <column name="balance" value="100"/>
+            <column name="initial_balance" value="100"/>
+        </insert>
+        <insert tableName="accounts">
+            <column name="id" value="3"/>
+            <column name="user_id" value="3"/>
+            <column name="balance" value="100"/>
+            <column name="initial_balance" value="100"/>
+        </insert>
+        <insert tableName="accounts">
+            <column name="id" value="4"/>
+            <column name="user_id" value="4"/>
+            <column name="balance" value="100"/>
+            <column name="initial_balance" value="100"/>
+        </insert>
+
+        <insert tableName="phone_data">
+            <column name="id" value="1"/>
+            <column name="user_id" value="1"/>
+            <column name="phone" value="79992221133"/>
+        </insert>
+        <insert tableName="phone_data">
+            <column name="id" value="2"/>
+            <column name="user_id" value="2"/>
+            <column name="phone" value="79992221144"/>
+        </insert>
+        <insert tableName="phone_data">
+            <column name="id" value="3"/>
+            <column name="user_id" value="3"/>
+            <column name="phone" value="79992221155"/>
+        </insert>
+        <insert tableName="phone_data">
+            <column name="id" value="4"/>
+            <column name="user_id" value="4"/>
+            <column name="phone" value="79992221166"/>
+        </insert>
+
+        <insert tableName="email_data">
+            <column name="id" value="1"/>
+            <column name="user_id" value="1"/>
+            <column name="email" value="petr@mail.ru"/>
+        </insert>
+        <insert tableName="email_data">
+            <column name="id" value="2"/>
+            <column name="user_id" value="2"/>
+            <column name="email" value="ivan@mail.ru"/>
+        </insert>
+        <insert tableName="email_data">
+            <column name="id" value="3"/>
+            <column name="user_id" value="3"/>
+            <column name="email" value="oleg@mail.ru"/>
+        </insert>
+        <insert tableName="email_data">
+            <column name="id" value="4"/>
+            <column name="user_id" value="4"/>
+            <column name="email" value="aleksand@mail.ru"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
